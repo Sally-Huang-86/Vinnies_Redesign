@@ -1,6 +1,67 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url("./fonts/OpenSans-Regular.ttf") format("ttf");
+}
+
+/* @font-face {
+    font-family: 'Arial rounded';
+    src: url("./fonts/unicode.arialr.ttf") format("ttf");
+} */
+
 .SH_carousel_img {
     background-color: aqua !important;
     width: 100px;
     padding: 10%;
     background-color: pink;
+}
+
+body {
+    margin: 0 20px;
+}
+
+h1, h2, h3, p {
+    font-family: 'Open Sans';
+}
+
+h1, h2 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.primary-btn {
+    color: white;
+    background-color: #3498DB;
+    border-radius: 12px;
+    border: none;
+    padding: 6px 18px;
+}
+
+.hero {
+    margin: 0 -20px;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url('./images/hero.jpg');
+    background-position: top;
+    background-size: 150% 150%;
+    background-repeat: no-repeat;
+    height: 272px;
+
+    /* TODO blend-mode linear overlay 204 76 86 100% */
+}
+
+.hero h1 {
+    margin-bottom: 8px;
+}
+
+.hero p {
+    max-width: 75%;
+}
+
+.hero button {
+    margin-top: auto;
 }
