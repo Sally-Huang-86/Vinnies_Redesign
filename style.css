@@ -1,6 +1,300 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url("./fonts/OpenSans-Regular.ttf") format("ttf");
+}
+
+/* @font-face {
+    font-family: 'Arial rounded';
+    src: url("./fonts/unicode.arialr.ttf") format("ttf");
+} */
+
+* {
+    box-sizing: border-box;
+}
+
 .SH_carousel_img {
     background-color: aqua !important;
     width: 100px;
     padding: 10%;
     background-color: pink;
+}
+
+body {
+    margin: 0 20px;
+}
+
+h1, h2, h3, p {
+    font-family: 'Open Sans';
+    line-height: 117%;
+}
+
+h1, h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+h3, p {
+    font-size: 14px;
+}
+
+hr {
+    border-top: 2px solid #DFDFDF;
+}
+
+.spacing-32 {
+    height: 2rem;
+}
+
+.spacing-16 {
+    height: 1rem;
+}
+
+.primary-btn {
+    color: white;
+    background-color: #3498DB;
+    border-radius: 12px;
+    border: none;
+    padding: 6px 18px;
+    text-transform: uppercase;
+}
+
+.navbar {
+    margin: 0 -20px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3498DB;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .icon, .category-card {
+    transition: transform 200ms ease-in;
+}
+
+.navbar .icon:hover, .category-card:hover {
+    transform: scale(1.2);
+}
+
+.navbar .icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 13px;
+}
+
+.primary-btn {
+    transition: background-color 300ms ease-in;
+    transition: color 300ms ease-in;
+}
+.primary-btn:hover {
+    background-color:rgba(185, 217, 245, 1);
+    color: black;
+}
+
+.primary-btn:active {
+    background-color: rgba(185, 217, 245, 1);
+    box-shadow: inset 6px 8px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero {
+    margin: 0 -20px;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url('./images/hero.jpg');
+    background-position: top;
+    /* background-size: 150% 150%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 272px;
+
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.5);
+/* 
+    -webkit-mask-image: linear-gradient(90deg, rgba(52, 152, 219, 0.25) -7.04%, rgba(255, 255, 255, 0.25) 108.1%);
+    mask-image: linear-gradient(90deg, rgba(52, 152, 219, 0.25) -7.04%, rgba(255, 255, 255, 0.25) 108.1%); */
+}
+
+.carousel {
+    margin-bottom: 16px;
+}
+
+.carousel-item {
+    height: 272px;
+}
+
+.hero h1 {
+    color: rgba(0, 85, 165, 1);
+    margin-bottom: 8px;
+}
+
+.hero p {
+    max-width: 75%;
+}
+
+.hero button {
+    margin-top: auto;
+}
+
+.disclaimer-text {
+    color: rgba(175, 7, 7, 1);
+    font-size: 12px;
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 16px;
+}
+
+.cards-grid {
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 36px;
+    grid-column-gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+
+    margin-bottom: 32px;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px 13px 17px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.24);
+
+    cursor: pointer;
+}
+
+.category-image {
+    border-radius: 10px;
+    margin-bottom: 16px;
+
+    background-size: cover;
+
+    width: 132px;
+    height: 132px;
+}
+
+
+.find-store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map-background {
+    padding: 0;
+    background-image: url('./images/vinnies-map.png');
+    width: 334px;
+    height: 332px;
+}
+
+.category-card.map-background:hover {
+    transform: none;
+    cursor: initial;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.find-store-map-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.find-store-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.find-store-text-content p {
+    margin: 12px 0;
+    text-align: center;
+}
+
+@media only screen and (min-width: 880px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    p, .disclaimer-text {
+        font-size: 28px;
+    }
+
+    body {
+            margin: 0 144px;
+    }
+
+    .primary-btn {
+        padding: 20px 60px;
+        font-size: 32px;
+    }
+
+    .navbar {
+        margin: 0 -144px;
+        padding: 0 144px;
+    }
+
+    .hero {
+        margin: 0 -144px;
+        padding: 144px 144px;
+        height: auto;
+    }
+
+    .hero button {
+        margin-top: 32px;
+    }
+
+    .find-store-map-content, .find-store-text-content {
+        max-width: 50%;
+    }
+
+    .find-store-text-content {
+        padding-left: 35px;
+    }
+
+    .find-store-text-content p {
+        margin: 30px 0;
+    }
+
+    .carousel-item {
+        height: 400px;
+    }
+
+    .vinnies-logo {
+        height: 100px;
+        width: auto;
+    }
+
+    .navbar .icon {
+        height: 30px;
+        width: 30px;
+
+        margin-left: 40px;
+    }
+
+    .navbar .icon:first-child {
+        margin-left: 0;
+    }
 }
