@@ -59,6 +59,7 @@ hr {
     border-radius: 12px;
     border: none;
     padding: 6px 18px;
+    text-transform: uppercase;
 }
 
 .hero {
@@ -99,12 +100,18 @@ hr {
     text-align: center;
 }
 
+.section-heading {
+    margin-bottom: 16px;
+}
+
 .cards-grid {
     display: grid;
     justify-content: center;
     grid-row-gap: 36px;
     grid-column-gap: 18px;
     grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+
+    margin-bottom: 32px;
 }
 
 .category-card {
@@ -127,8 +134,81 @@ hr {
     height: 132px;
 }
 
-@media only screen and (max-width: 680px) {
-    .hide-mobile {
-        display: none;
+
+.find-store {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map-background {
+    padding: 0;
+    background-image: url('./images/vinnies-map.png');
+    width: 334px;
+    height: 332px;
+}
+
+.find-store-map-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.find-store-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.find-store-text-content p {
+    margin: 12px 0;
+    text-align: center;
+}
+
+@media only screen and (min-width: 680px) {
+    h1 {
+        font-size: 60px;
     }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    p, .disclaimer-text {
+        font-size: 28px;
+    }
+
+    body {
+            margin: 0 144px;
+    }
+
+    .primary-btn {
+        padding: 20px 60px;
+        font-size: 32px;
+    }
+
+    .hero {
+        margin: 0 -144px;
+        padding: 144px 144px;
+        height: auto;
+    }
+
+    .hero button {
+        margin-top: 32px;
+    }
+
+    .find-store-map-content, .find-store-text-content {
+        max-width: 50%;
+    }
+
+    .find-store-text-content {
+        padding-left: 35px;
+    }
+
+    .find-store-text-content p {
+        margin: 30px 0;
+    }
+
 }
