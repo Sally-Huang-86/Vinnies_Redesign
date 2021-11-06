@@ -8,6 +8,10 @@
     src: url("./fonts/unicode.arialr.ttf") format("ttf");
 } */
 
+* {
+    box-sizing: border-box;
+}
+
 .SH_carousel_img {
     background-color: aqua !important;
     width: 100px;
@@ -21,14 +25,32 @@ body {
 
 h1, h2, h3, p {
     font-family: 'Open Sans';
+    line-height: 117%;
 }
 
 h1, h2 {
     font-size: 25px;
+    font-weight: bold;
 }
 
-p {
+h3 {
+    font-weight: 700;
+}
+
+h3, p {
     font-size: 14px;
+}
+
+hr {
+    border-top: 2px solid #DFDFDF;
+}
+
+.spacing-32 {
+    height: 2rem;
+}
+
+.spacing-16 {
+    height: 1rem;
 }
 
 .primary-btn {
@@ -47,14 +69,19 @@ p {
     align-items: flex-start;
     background-image: url('./images/hero.jpg');
     background-position: top;
-    background-size: 150% 150%;
+    /* background-size: 150% 150%; */
+    background-size: cover;
     background-repeat: no-repeat;
     height: 272px;
 
-    /* TODO blend-mode linear overlay 204 76 86 100% */
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.5);
+/* 
+    -webkit-mask-image: linear-gradient(90deg, rgba(52, 152, 219, 0.25) -7.04%, rgba(255, 255, 255, 0.25) 108.1%);
+    mask-image: linear-gradient(90deg, rgba(52, 152, 219, 0.25) -7.04%, rgba(255, 255, 255, 0.25) 108.1%); */
 }
 
 .hero h1 {
+    color: rgba(0, 85, 165, 1);
     margin-bottom: 8px;
 }
 
@@ -64,4 +91,44 @@ p {
 
 .hero button {
     margin-top: auto;
+}
+
+.disclaimer-text {
+    color: rgba(175, 7, 7, 1);
+    font-size: 12px;
+    text-align: center;
+}
+
+.cards-grid {
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 36px;
+    grid-column-gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 15px 13px 17px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+.category-image {
+    border-radius: 10px;
+    margin-bottom: 16px;
+
+    background-size: cover;
+
+    width: 132px;
+    height: 132px;
+}
+
+@media only screen and (max-width: 680px) {
+    .hide-mobile {
+        display: none;
+    }
 }
